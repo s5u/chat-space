@@ -16,8 +16,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, add_index|
-|email|string|null: false|
-|password|string|null: false|
+|email|string||
+|password|string||
 
 ### Association
 - has_many :messages
@@ -30,7 +30,7 @@
 |name|string|null: false, unique: true|
 
 ### Association
-  has_many :messages
+- has_many :messages
 - has_many :members
 - has_many :users, through: :menbers
 
