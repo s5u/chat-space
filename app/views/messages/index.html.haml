@@ -16,9 +16,14 @@
     = render 'group', group: group
  %div.chat-main
   %div.chat-header
+   %div.chat-header--left
+    %h2 サンプルグループ
+    %p.chat-header__menbers Members: yuki yuji
+   %div.chat-header--right
+    %a.chat-header__edit-btn
   %div.chat-body
-  %ul.chat-messages
-   - @messages.each do |message|
-    = render 'message', message: message
+   %ul.chat-messages
+    - @messages.each do |message|
+     = render 'message', message: message
   %div.chat-footer
 
