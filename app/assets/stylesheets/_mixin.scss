@@ -5,3 +5,18 @@
     clear: both;
   }
 }
+
+@mixin block($background-color, $width, $height, $float: none) {
+  background-color: $background-color;
+  width: $width;
+  height: $height;
+  float: $float;
+}
+
+@mixin font() {
+
+}
+
+@mixin border(){
+
+}
