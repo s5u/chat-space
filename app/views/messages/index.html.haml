@@ -2,13 +2,22 @@
 %html
  %head
  %body
+ %p.notice チャットグループが作成されました。
  %div.chat-side
   %div.chat-user
+   %h5 yuki shimizu
+   %div.chat-user__actions
+    %a.chat-user__action
+     %i.fa.pencil-square-o
+    %a.chat-user__action
+     %i.fa-cog
   %div.chat-groups
+   - @groups.each do |group|
+    = render 'group', group: group
  %div.chat-main
   %div.chat-header
   %div.chat-body
   %ul.chat-messages
-    %li.chat-message
+   %li.chat-message
   %div.chat-footer
 
