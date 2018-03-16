@@ -18,6 +18,7 @@
   %div.chat-header
   %div.chat-body
   %ul.chat-messages
-   %li.chat-message
+   - @messages.each do |message|
+    = render 'message', message: message
   %div.chat-footer
 
