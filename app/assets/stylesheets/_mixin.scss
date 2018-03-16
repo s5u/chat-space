@@ -1,0 +1,7 @@
+@mixin cearfix() {
+  &:after {
+    content: '';
+    display: none;
+    clear: both;
+  }
+}
