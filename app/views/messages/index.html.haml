@@ -1,29 +1,30 @@
 !!! 5
 %html
- %head
- %body
- %p.notice チャットグループが作成されました。
- %div.chat-side
-  %div.chat-user
-   %h5 yuki shimizu
-   %div.chat-user__actions
-    %a.chat-user__action
-     %i.fa.fa-pencil-square-o
-    %a.chat-user__action
-     %i.fa.fa-cog
-  %div.chat-groups
-   - @groups.each do |group|
-    = render 'group', group: group
- %div.chat-main
-  %div.chat-header
-   %div.chat-header--left
-    %h2 サンプルグループ
-    %p.chat-header__menbers Members: yuki yuji
-   %div.chat-header--right
-    %a.chat-header__edit-btn
-  %div.chat-body
-   %ul.chat-messages
-    - @messages.each do |message|
-     = render 'message', message: message
-  %div.chat-footer
+  %head
+  %body
+  %p.notice チャットグループが作成されました。
+  %div.chat-layout
+    %div.chat-side
+      %div.chat-user
+        %h5 yuki shimizu
+        %div.chat-user__actions
+          %a.chat-user__action
+            %i.fa.fa-pencil-square-o
+          %a.chat-user__action
+            %i.fa.fa-cog
+      %div.chat-groups
+        - @groups.each do |group|
+          = render 'group', group: group
+    %div.chat-main
+      %div.chat-header
+        %div.chat-header--left
+          %h2 サンプルグループ
+          %p.chat-header__menbers Members: yuki yuji
+          %div.chat-header--right
+          %a.chat-header__edit-btn
+        %div.chat-body
+          %ul.chat-messages
+            - @messages.each do |message|
+              = render 'message', message: message
+      %div.chat-footer
 

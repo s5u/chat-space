@@ -1,15 +1,17 @@
 // Side
+.chat-layout {
+  @include cearfix();
+  height: 100%;
+}
 .chat-side {
   background-color: #2f3e51;
   color: $sub-text-color;
-  padding: 0 20px;
   width: 300px;
   height: 100%;
   float: left;
 }
 
 .chat-main {
-  padding: 0 40px;
   width: calc(100% - 300px);
   height: 100%;
   float: left;
