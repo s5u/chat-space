@@ -1,0 +1,142 @@
+// Overall
+.chat-layout {
+  @include clearfix();
+  height: 100%;
+}
+
+.notice {
+  background-color: #38AEF0;
+  color: $white;
+  text-align: center;
+}
+
+
+// Side
+.chat-side {
+  @include block($blue, 300px, 100%, left);
+  color: $white;
+}
+
+.chat-user {
+  background-color: $dark-blue;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+  @include clearfix();
+  h5 {
+    @include font($white, 16px, bold);
+    float: left;
+  }
+  .chat-user__actions {
+    float: right;
+    a {
+      @include font($white, 20px, bold);
+    }
+  }
+}
+.chat-groups {
+  padding: 0 20px;
+  .chat-group {
+    margin: 20px 0 40px 0;
+    .chat-group__name {
+      @include font($white, 15px, normal);
+      margin-bottom: 5px;
+    }
+    .chat-group__message {
+      @include font($white, 11px, normal);
+    }
+  }
+}
+
+
+// Main
+.chat-main {
+  @include block(transparent, calc(100vw - 300px), 100%, left);
+  position: relative;
+}
+
+.chat-header {
+  @include clearfix();
+  padding: 0 40px;
+  border-bottom: solid 1px $whitish-gray;
+  .chat-header--left {
+    float: left;
+    h2 {
+      @include font($heavy-gray, 20px, bold);
+      padding: 35px 0 15px 0;
+    }
+    .chat-header__members {
+      @include font($gray, 12px, normal);
+      padding-bottom: 16px;
+    }
+  }
+  .chat-header--right {
+    float: right;
+    height: 40px;
+    margin-top: 28px;
+    .chat-header__edit-btn {
+      color: $sky-blue;
+      line-height: 40px;
+      padding: 0 20px;
+      border: solid 1px $sky-blue;
+    }
+  }
+}
+
+.chat-body {
+  padding: 0 40px;
+  .chat-message {
+    padding: 46px 0 40px 0;
+    .chat-message__user {
+      @include font($black-blue, 16px, bold);
+      margin-bottom: 10px;
+      span {
+        @include font($gray, 12px, normal);
+        margin-left: 10px;
+      }
+    }
+    .chat-message__content {
+      @include font($black-blue, 14px, normal);
+    }
+  }
+}
+
+.chat-footer {
+  background-color: $whitish-gray;
+  padding: 20px 40px;
+  position: absolute;
+  bottom: 0;
+  width: calc(100vw - 380px);
+  .chat-footer__body {
+    @include clearfix();
+    position: relative;
+    textarea {
+      @include block($white, calc(100% - 135px), 50px, left);
+      @include font($black-blue, 16px, normal);
+      line-height: 50px;
+      padding: 0 10px;
+      display: block;
+    }
+    .chat-footer__file {
+      float: right;
+      display: block;
+      input {
+        display: none;
+      }
+      .fa-image {
+         @include font($black, 20px, bold);
+      }
+      position: absolute;
+      top: 13px;
+      right: 125px;
+    }
+    input[type='submit'] {
+      @include block($sky-blue, 100px, 50px, right);
+      @include font($white, 20px, normal);
+      cursor: pointer;
+      line-height: 50px;
+      display: block;
+      margin-left: 15px;
+    }
+  }
+}
