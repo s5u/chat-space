@@ -28,9 +28,10 @@
     float: left;
   }
   .chat-user__actions {
-    @include font($white, 20px, bold);
-    cursor: pointer;
     float: right;
+    a {
+      @include font($white, 20px, bold);
+    }
   }
 }
 .chat-groups {
@@ -51,4 +52,33 @@
 // Main
 .chat-main {
   @include block(transparent, calc(100vw - 300px), 100%, left);
+}
+
+.chat-header {
+  @include clearfix();
+  padding: 0 40px;
+  border-bottom: solid 1px $whitish-gray;
+  .chat-header--left {
+    float: left;
+    h2 {
+      @include font($heavy-gray, 20px, bold);
+      padding: 35px 0 15px 0;
+    }
+    .chat-header__members {
+      @include font($gray, 12px, normal);
+      padding-bottom: 16px;
+    }
+  }
+  .chat-header--right {
+    float: right;
+    height: 40px;
+    margin-top: 28px;
+    .chat-header__edit-btn {
+      color: $sky-blue;
+      line-height: 40px;
+      padding: 0 20px;
+      border: solid 1px $sky-blue;
+    }
+  }
+
 }

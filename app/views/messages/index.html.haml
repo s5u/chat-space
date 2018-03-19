@@ -8,9 +8,9 @@
       %div.chat-user
         %h5 yuki shimizu
         %div.chat-user__actions
-          %a.chat-user__action
+          %a.chat-user__action{href: '#'}
             %i.fa.fa-pencil-square-o
-          %a.chat-user__action
+          %a.chat-user__action{href: '#'}
             %i.fa.fa-cog
       %div.chat-groups
         - @groups.each do |group|
@@ -19,12 +19,13 @@
       %div.chat-header
         %div.chat-header--left
           %h2 サンプルグループ
-          %p.chat-header__menbers Members: yuki yuji
-          %div.chat-header--right
-          %a.chat-header__edit-btn
-        %div.chat-body
-          %ul.chat-messages
-            - @messages.each do |message|
-              = render 'message', message: message
+          %p.chat-header__members Members: yuki yuji
+        %div.chat-header--right
+          %a{href: '#'}
+            %div.chat-header__edit-btn Edit
+      %div.chat-body
+        %ul.chat-messages
+          - @messages.each do |message|
+            = render 'message', message: message
       %div.chat-footer
 
