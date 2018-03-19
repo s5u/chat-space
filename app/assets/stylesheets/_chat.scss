@@ -80,5 +80,22 @@
       border: solid 1px $sky-blue;
     }
   }
+}
 
+.chat-body {
+  padding: 0 40px;
+  .chat-message {
+    padding: 46px 0 40px 0;
+    .chat-message__user {
+      @include font($black-blue, 16px, bold);
+      margin-bottom: 10px;
+      span {
+        @include font($gray, 12px, normal);
+        margin-left: 10px;
+      }
+    }
+    .chat-message__content {
+      @include font($black-blue, 14px, normal);
+    }
+  }
 }
