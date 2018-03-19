@@ -6,15 +6,17 @@
   }
 }
 
-@mixin block($background-color, $width, $height, $float: none) {
+@mixin block($background-color, $width, $height, $float) {
   background-color: $background-color;
   width: $width;
   height: $height;
   float: $float;
 }
 
-@mixin font() {
-
+@mixin font($color, $font-size, $font-weight) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
 }
 
 @mixin border(){

@@ -6,24 +6,36 @@
 
 .notice {
   background-color: #38AEF0;
-  color: $sub-text-color;
+  color: $white;
   text-align: center;
 }
 
 
 // Side
 .chat-side {
-  background-color: #2f3e51;
-  color: $sub-text-color;
-  width: 300px;
-  height: 100%;
-  float: left;
+  @include block($blue, 300px, 100%, left);
+  color: $white;
+}
+
+.chat-user {
+  background-color: $dark-blue;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+  @include clearfix();
+  h5 {
+    @include font($white, 16px, bold);
+    float: left;
+  }
+  .chat-user__actions {
+    @include font($white, 20px, bold);
+    cursor: pointer;
+    float: right;
+  }
 }
 
 
 // Main
 .chat-main {
-  width: calc(100vw - 300px);
-  height: 100%;
-  float: left;
+  @include block(transparent, calc(100vw - 300px), 100%, left);
 }
