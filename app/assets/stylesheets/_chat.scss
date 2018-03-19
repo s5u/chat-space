@@ -33,6 +33,19 @@
     float: right;
   }
 }
+.chat-groups {
+  padding: 0 20px;
+  .chat-group {
+    margin: 20px 0 40px 0;
+    .chat-group__name {
+      @include font($white, 15px, normal);
+      margin-bottom: 5px;
+    }
+    .chat-group__message {
+      @include font($white, 11px, normal);
+    }
+  }
+}
 
 
 // Main
