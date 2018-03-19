@@ -52,7 +52,6 @@
 // Main
 .chat-main {
   @include block(transparent, calc(100vw - 300px), 100%, left);
-  position: relative;
 }
 
 .chat-header {
@@ -97,46 +96,6 @@
     }
     .chat-message__content {
       @include font($black-blue, 14px, normal);
-    }
-  }
-}
-
-.chat-footer {
-  background-color: $whitish-gray;
-  padding: 20px 40px;
-  position: absolute;
-  bottom: 0;
-  width: calc(100vw - 380px);
-  .chat-footer__body {
-    @include clearfix();
-    position: relative;
-    textarea {
-      @include block($white, calc(100% - 135px), 50px, left);
-      @include font($black-blue, 16px, normal);
-      line-height: 50px;
-      padding: 0 10px;
-      display: block;
-    }
-    .chat-footer__file {
-      float: right;
-      display: block;
-      input {
-        display: none;
-      }
-      .fa-image {
-         @include font($black, 20px, bold);
-      }
-      position: absolute;
-      top: 13px;
-      right: 125px;
-    }
-    input[type='submit'] {
-      @include block($sky-blue, 100px, 50px, right);
-      @include font($white, 20px, normal);
-      cursor: pointer;
-      line-height: 50px;
-      display: block;
-      margin-left: 15px;
     }
   }
 }
