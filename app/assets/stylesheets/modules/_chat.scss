@@ -4,13 +4,6 @@
   height: 100%;
 }
 
-.notice {
-  background-color: #38AEF0;
-  color: $white;
-  text-align: center;
-}
-
-
 // Side
 .chat-side {
   @include block($blue, 300px, 100%, left);
