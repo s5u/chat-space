@@ -28,4 +28,10 @@
           - @messages.each do |message|
             = render 'message', message: message
       %div.chat-footer
+        %form.chat-footer__body
+          %textarea{placeholder: 'type a message', name: 'message-body', row: 1}
+          %label.chat-footer__file
+            %input{type: 'file', name: 'message-image'}
+              %i.fa.fa-image
+          %input{type: 'submit', name: 'send', value: 'Send'}
 
