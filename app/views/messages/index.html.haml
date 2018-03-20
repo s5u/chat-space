@@ -6,7 +6,8 @@
   %div.chat-layout
     %div.chat-side
       %div.chat-user
-        %h5 yuki shimizu
+        %h5
+          = current_user.name
         %div.chat-user__actions
           = link_to do
             = fa_icon 'pencil-square-o', class: 'icon'
