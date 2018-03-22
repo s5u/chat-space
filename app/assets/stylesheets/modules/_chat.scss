@@ -78,8 +78,14 @@
 
 .chat-body {
   padding: 0 40px;
+  height: calc(100vh - 205px);
+  overflow: scroll;
   .chat-message {
     padding: 46px 0 40px 0;
+    img {
+      max-height: 150px;
+      max-width:  150px;
+    }
     .chat-message__user {
       @include font($black-blue, 16px, bold);
       margin-bottom: 10px;

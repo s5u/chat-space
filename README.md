@@ -3,7 +3,7 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
+|content|text||
 |image|string||
 |user|references|foreign_key: true|
 |group|references|foreign_key: true|

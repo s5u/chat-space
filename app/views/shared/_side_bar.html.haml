@@ -9,4 +9,4 @@
         = fa_icon 'cog', class: 'icon'
   %div.chat-groups
     - current_user.groups.each do |group|
-      = render 'group', group: group
+      = render 'shared/group', group: group
