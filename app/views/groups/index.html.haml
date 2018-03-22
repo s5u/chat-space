@@ -3,18 +3,7 @@
   %head
   %body
   %div.chat-layout
-    %div.chat-side
-      %div.chat-user
-        %h5
-          = current_user.name
-        %div.chat-user__actions
-          = link_to new_group_path do
-            = fa_icon 'pencil-square-o', class: 'icon'
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog', class: 'icon'
-      %div.chat-groups
-        - current_user.groups.each do |group|
-          = render 'group', group: group
+    = render 'shared/side_bar'
     %div.chat-main
       %div.chat-header
         %div.chat-header--left
