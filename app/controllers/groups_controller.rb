@@ -1,4 +1,9 @@
 class GroupsController < ApplicationController
+
+  def index
+    @messages = [ { name: 'yuki', message: 'おはよう' }, { name: 'yuji', message: 'こんにちは' }]
+  end
+
   def new
     @group = Group.new
     @group.users << current_user
