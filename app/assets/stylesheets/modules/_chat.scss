@@ -78,6 +78,8 @@
 
 .chat-body {
   padding: 0 40px;
+  height: calc(100vh - 205px);
+  overflow: scroll;
   .chat-message {
     padding: 46px 0 40px 0;
     .chat-message__user {
