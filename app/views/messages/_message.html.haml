@@ -4,4 +4,6 @@
     %span
       = message.created_at.strftime('%Y/%m/%d %H:%M')
   %p.chat-message__content
-    = message.content
+    = message.content if message.content.present?
+    %div
+    = image_tag message.image.url if message.image.present?

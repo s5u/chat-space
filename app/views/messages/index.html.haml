@@ -15,8 +15,7 @@
             %div.chat-header__edit-btn Edit
       %div.chat-body
         %ul.chat-messages
-          - @messages.each do |message|
-            = render 'message', message: message
+          = render @messages
       %div.chat-footer
         = form_for [@group, @message], html: { class: 'chat-footer__body' } do |f|
           = f.text_area :content, placeholder: 'type a message'
