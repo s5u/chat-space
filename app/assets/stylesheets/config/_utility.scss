@@ -11,3 +11,7 @@ input, button, textarea, select {
   -moz-appearance: none;
   appearance: none;
 }
+
+input {
+  border: solid 1px $light-gray;
+}
