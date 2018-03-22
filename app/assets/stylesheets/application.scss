@@ -1,6 +1,9 @@
 @import 'font-awesome';
-@import './reset';
-@import './utility';
-@import './variable';
-@import './mixin';
-@import './chat';
+@import 'config/reset';
+@import 'config/variable';
+@import 'config/utility';
+@import 'mixins/mixin';
+@import 'modules/chat';
+@import 'modules/user';
+@import 'modules/flash';
+@import 'modules/group';
