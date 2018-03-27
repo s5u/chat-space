@@ -14,6 +14,10 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください'
       render :index
     end
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   private
