@@ -27,6 +27,7 @@ $(function(){
       contentType: false
     }).done(function(data){
       $('.chat-messages').append(buildHTML(data));
+      $('.chat-body').animate({ scrollTop: $('.chat-body')[0].scrollHeight }, 'fast');
       $('#message_content').val('');
       $('#message_image').val('');
     }).fail(function(){
