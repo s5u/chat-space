@@ -1,4 +1,19 @@
 $(function(){
+
+  function buildHTML(message){
+    var image = message.image.url == null ? '' : `<img src="${message.image.url}">`
+    var html = `<li class='chat-message'>
+                  <p class='chat-message__user'>${message.user_name}<span>${message.created_at}</span></p>
+                  <p class='chat-message__content'>
+                    ${message.content}
+                    <div>
+                      ${image}
+                    </div>
+                  </p>
+               </li>`
+    return html
+  }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -10,10 +25,12 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
+    }).done(function(data){
+      $('.chat-messages').append(buildHTML(data));
+      $('#message_content').val('');
+      $('#message_image').val('');
+    }).fail(function(){
+      alert('メッセージの送信に失敗しました。');
     })
-    .done(function(data){
-
-    })
-    .fail()
   });
 })
