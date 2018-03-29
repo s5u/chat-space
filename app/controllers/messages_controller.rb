@@ -6,7 +6,9 @@ class MessagesController < ApplicationController
         @message = Message.new
         @messages = @group.messages.includes(:user)
       }
-      format.json
+      format.json {
+        @messages = @group.messages.includes(:user)
+      }
     end
   end
 
