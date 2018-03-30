@@ -47,18 +47,17 @@ $(function(){
 
     var insterval = setInterval(function(){
       if (location.href.match(/\/groups\/\d+\/messages/)) {
+        var id = $('.chat-message:last-child').data('message-id');
         $.ajax({
           url: location.pathname,
           type: 'GET',
+          data: { id: id },
           dataType: 'json'
         })
         .done(function(messages){
-          var id = $('.chat-message:last-child').data('message-id');
           var insertHTML = '';
           messages.forEach(function(message){
-            if (message.id > id) {
-              insertHTML += buildHTML(message);
-            }
+            insertHTML += buildHTML(message);
           });
           $('.chat-messages').append(insertHTML);
         })
