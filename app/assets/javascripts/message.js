@@ -16,7 +16,8 @@ $(function(){
       return html
     }
 
-    $('#new_message').on('submit', function(e){
+    var submit_button = $('#new_message');
+    submit_button.on('submit', function(e){
       e.preventDefault();
       var formData = new FormData(this);
       var url = $(this).attr('action');
@@ -32,6 +33,7 @@ $(function(){
         $('.chat-body').animate({ scrollTop: $('.chat-body')[0].scrollHeight }, 'fast');
         $('#message_content').val('');
         $('#message_image').val('');
+        $.rails.enableFormElements(submit_button);
       }).fail(function(){
         alert('メッセージの送信に失敗しました');
       })
