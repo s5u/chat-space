@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
-    @messages = [ { name: 'yuki', message: 'おはよう' }, { name: 'yuji', message: 'こんにちは' }]
   end
 
   def new
