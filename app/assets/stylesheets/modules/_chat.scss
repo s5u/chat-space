@@ -140,6 +140,7 @@
     input[type='submit']:disabled {
       background-color: $gray;
       color: $light-gray;
+      cursor: default;
     }
   }
 }
