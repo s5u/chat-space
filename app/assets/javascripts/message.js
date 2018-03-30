@@ -13,8 +13,16 @@ $(function(){
                       </div>
                     </p>
                  </li>`
-      return html
+      return html;
     }
+
+    $('#message_content, #message_image').on('input change',function(){
+      if($(this).val()) {
+        $('input[type="submit"]').removeAttr('disabled');
+      } else {
+        $('input[type="submit"]').attr('disabled', 'disabled');
+      }
+    })
 
     var submit_button = $('#new_message');
     submit_button.on('submit', function(e){
@@ -33,10 +41,9 @@ $(function(){
         $('.chat-body').animate({ scrollTop: $('.chat-body')[0].scrollHeight }, 'fast');
         $('#message_content').val('');
         $('#message_image').val('');
-        $.rails.enableFormElements(submit_button);
       }).fail(function(){
         alert('メッセージの送信に失敗しました');
-      })
+      });
     });
 
     var insterval = setInterval(function(){
@@ -58,7 +65,7 @@ $(function(){
         })
         .fail(function(){
           alert('データの取得に失敗しました')
-        })
+        });
       } else {
         clearInterval(insterval);
       }

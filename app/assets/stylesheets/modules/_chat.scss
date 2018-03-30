@@ -137,5 +137,9 @@
       display: block;
       margin-left: 15px;
     }
+    input[type='submit']:disabled {
+      background-color: $gray;
+      color: $light-gray;
+    }
   }
 }
