@@ -100,7 +100,7 @@ GEM
     ffi (1.9.23)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    fog (2.0.0)
+    fog (1.42.0)
       fog-aliyun (>= 0.1.0)
       fog-atmos
       fog-aws (>= 0.6.0)
@@ -462,7 +462,7 @@ DEPENDENCIES
   erb2haml
   factory_bot_rails (~> 4.0)
   faker
-  fog
+  fog (~> 1.41)
   font-awesome-rails
   haml-rails (~> 1.0)
   jbuilder (~> 2.5)
